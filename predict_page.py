@@ -62,7 +62,7 @@ def show_predict_page():
     st.write("""#### Please enter a hotel review in plain text. The system will classify the review as truthful or deceptive.""")
     st.write("""##### Note: the current trained model has an accuracy of 88.125%.""")
 
-    user_input = st.text_area("Hotel Review", "") # no default values
+    user_input = st.text_area("Hotel Review (in plain text)", "") # no default values
     df = pd.DataFrame([user_input], columns =['review'])
     df['review_without_stopwords'] = remove_stop_words(df['review'])
 
